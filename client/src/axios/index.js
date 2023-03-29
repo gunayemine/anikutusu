@@ -2,7 +2,7 @@ import axios from 'axios'
 import App from '../App'
 import UpdateMemory from '../components/UpdateMemory'
 
-const API = axios.create({ baseURL: 'http://localhost:5000', withCredentials: true, })
+const API = axios.create({ baseURL: 'https://ani-kutum.herokuapp.com/', withCredentials: true, })
 
 API.interceptors.request.use((req) => {
   if(localStorage.getItem('user')) {

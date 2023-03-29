@@ -44,6 +44,7 @@ router.post('/signup', async(req,res)=> {
         res.cookie('token', refreshToken, {
         httpOnly: true,
         sameSite: 'strict',
+        secure: true
         })
         res.status(200).json({user, accessToken})
     } catch (error) {
@@ -86,6 +87,7 @@ router.post('/signin', async(req,res) => {
     res.cookie('token', refreshToken, {
     httpOnly: true,
     sameSite: 'strict',
+    secure: true
     })
         res.status(200).json({user, accessToken})
     } catch (error) {
